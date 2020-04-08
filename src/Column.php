@@ -193,7 +193,7 @@ class Column
         $parameters = array_merge($this->getCurrentInput(), $parameters);
 
         // Grab the current URL
-        $path = URL::getRequest()->path();
+        $path = URL::current();
 
         return url($path . '/?' . http_build_query($parameters));
     }
